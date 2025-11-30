@@ -4,8 +4,8 @@ category: "Hotel Bedroom Furniture"
 subCategory: "Full Bedroom Sets"
 description: "Premium solid wood king size bed set with upholstered headboard, suitable for 5-star hotels."
 images: 
-  - "https://images.unsplash.com/photo-1505693416388-b034680970bf?auto=format&fit=crop&w=1200&q=80"
-  - "https://images.unsplash.com/photo-1505693314120-0d4438699d70?auto=format&fit=crop&w=1200&q=80"
+  - "/images/products/luxury-king-bed-1.jpg"
+  - "/images/products/luxury-king-bed-2.jpg"
 materials: ["Solid Oak Wood", "High-density Foam", "Premium Velvet Fabric", "Stainless Steel Accents"]
 dimensions: "King Size: 2000mm x 2000mm"
 moq: "10 Sets"

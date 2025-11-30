@@ -3,12 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const categories = [
-  { title: "Bedroom Furniture", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80", href: "/catalog/bedroom" },
-  { title: "Lobby Furniture", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80", href: "/catalog/lobby" },
-  { title: "Restaurant Furniture", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80", href: "/catalog/restaurant" },
-  { title: "Outdoor Furniture", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80", href: "/catalog/outdoor" },
-  { title: "Custom Design", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80", href: "/catalog/custom" },
-  { title: "Furniture By Space", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&w=800&q=80", href: "/catalog/by-space" },
+  { title: "Bedroom Furniture", image: "/images/products/cat-bedroom.jpg", href: "/catalog/bedroom" },
+  { title: "Lobby Furniture", image: "/images/products/cat-lobby.jpg", href: "/catalog/lobby" },
+  { title: "Restaurant Furniture", image: "/images/products/cat-restaurant.jpg", href: "/catalog/restaurant" },
+  { title: "Outdoor Furniture", image: "/images/products/cat-outdoor.jpg", href: "/catalog/outdoor" },
+  { title: "Custom Design", image: "/images/products/cat-custom.jpg", href: "/catalog/custom" },
+  { title: "Furniture By Space", image: "/images/products/cat-by-space.jpg", href: "/catalog/by-space" },
 ];
 
 const features = [
@@ -19,9 +19,9 @@ const features = [
 ];
 
 const projects = [
-  { name: "Hilton Garden Inn, Dubai", image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" },
-  { name: "Marriott Resort, Maldives", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" },
-  { name: "Sheraton Grand, Sydney", image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" },
+  { name: "Hilton Garden Inn, Dubai", image: "/images/projects/hilton-dubai.jpg" },
+  { name: "Marriott Resort, Maldives", image: "/images/projects/marriott-maldives.jpg" },
+  { name: "Sheraton Grand, Sydney", image: "/images/projects/sheraton-sydney.jpg" },
 ];
 
 // Get latest 3 insights
@@ -66,7 +66,7 @@ const schema = {
   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img 
-        src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1920&q=80" 
+        src="/images/banners/home-hero.jpg" 
         alt="Luxury Hotel Bedroom" 
         class="w-full h-full object-cover brightness-[0.4]"
       />
@@ -153,11 +153,11 @@ const schema = {
         </div>
         <div class="relative h-[500px]">
           <img 
-            src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80" 
+            src="/images/misc/factory.jpg" 
             alt="Factory Production" 
             class="w-full h-full object-cover rounded-sm shadow-2xl"
           />
-          <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary p-6 flex flex-col justify-center items-center text-center hidden md:flex">
+          <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary p-6 hidden md:flex flex-col justify-center items-center text-center">
              <span class="text-4xl font-bold block mb-1">15+</span>
              <span class="text-sm uppercase tracking-wider">Years Experience</span>
           </div>

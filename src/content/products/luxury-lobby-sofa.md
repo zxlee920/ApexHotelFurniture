@@ -4,8 +4,8 @@ category: "Hotel Lobby Furniture"
 subCategory: "Sofas"
 description: "Elegant modular sofa system designed for high-traffic hotel lobbies, featuring stain-resistant fabric and durable construction."
 images: 
-  - "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
-  - "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+  - "/images/products/luxury-lobby-sofa-1.jpg"
+  - "/images/products/luxury-lobby-sofa-2.jpg"
 materials: ["Solid Hardwood Frame", "Commercial Grade Fabric", "High Resilience Foam", "Brushed Brass Legs"]
 dimensions: "Module A: 1800mm x 900mm, Module B: 2000mm x 900mm"
 moq: "5 Sets"

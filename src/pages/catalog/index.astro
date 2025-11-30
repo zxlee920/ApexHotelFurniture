@@ -6,7 +6,35 @@ import { slugify } from '../../utils/common';
 
 const products = await getCollection('products');
 
-// Get unique categories for filter sidebar
+// 与主菜单一致的分类结构
+const catalogMenu = [
+  {
+    title: "Hotel Bedroom Furniture",
+    items: ["Hotel Beds", "Headboards", "Nightstands", "Dressers", "TV Cabinets", "Wardrobes", "Writing Desks", "Lounge Chairs", "Full Bedroom Sets"]
+  },
+  {
+    title: "Hotel Lobby Furniture",
+    items: ["Sofas", "Lounge Chairs", "Coffee Tables", "Reception Desks", "Console Tables"]
+  },
+  {
+    title: "Hotel Restaurant Furniture",
+    items: ["Dining Chairs", "Dining Tables", "Booth Seating", "Bar Stools"]
+  },
+  {
+    title: "Hotel Outdoor Furniture",
+    items: ["Outdoor Lounge Chairs", "Patio Tables", "Outdoor Sofas", "Sun Loungers"]
+  },
+  {
+    title: "Custom Hotel Furniture",
+    items: ["Custom Design Service", "Material Options", "Manufacturing Capability", "OEM ODM Service"]
+  },
+  {
+    title: "Hotel Furniture By Space",
+    items: ["Guest Room", "Lobby", "Restaurant", "Suite", "Conference Room", "Outdoor Areas"]
+  }
+];
+
+// Get unique categories for schema
 const categories = [...new Set(products.map((product) => product.data.category))];
 
 const schema = {
@@ -33,7 +61,7 @@ const schema = {
 >
   <section class="relative py-24 bg-gray-900 flex items-center justify-center overflow-hidden mb-12">
     <div class="absolute inset-0 z-0 opacity-30">
-       <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1920&q=80" alt="Catalog" class="w-full h-full object-cover" />
+       <img src="/images/banners/catalog-hero.jpg" alt="Catalog" class="w-full h-full object-cover" />
     </div>
     <div class="relative z-10 text-center max-w-4xl px-6">
       <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Product Catalog</h1>
@@ -45,26 +73,32 @@ const schema = {
     <div class="flex flex-col lg:flex-row gap-12">
       <!-- Sidebar Filters -->
       <aside class="w-full lg:w-1/4">
-        <div class="bg-white p-6 shadow-sm rounded-lg border sticky top-24">
+        <div class="bg-white p-6 shadow-sm rounded-lg border">
           <h3 class="text-xl font-bold mb-4 border-b pb-2">Categories</h3>
-          <ul class="space-y-2">
-            <li><a href="/catalog" class="text-secondary font-bold">All Products</a></li>
-            {categories.map((cat) => (
-              <li>
-                <a href={`/catalog/${slugify(String(cat))}`} class="text-gray-600 hover:text-secondary transition-colors">
-                  {cat}
-                </a>
-              </li>
+          <div class="space-y-4">
+            <a href="/catalog" class="block text-secondary font-bold mb-4">All Products</a>
+            {catalogMenu.map((section) => (
+              <div class="border-b border-gray-100 pb-4 last:border-0">
+                <h4 class="font-bold text-primary mb-2">
+                  <a href={`/catalog/${slugify(section.title)}`} class="hover:text-secondary transition-colors">
+                    {section.title}
+                  </a>
+                </h4>
+                <ul class="space-y-1 pl-3 border-l-2 border-gray-100">
+                  {section.items.map((item) => (
+                    <li>
+                      <a 
+                        href={`/catalog/${slugify(section.title)}?sub=${slugify(item)}`} 
+                        class="text-sm text-gray-500 hover:text-secondary transition-colors block py-0.5"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
-          
-          <h3 class="text-xl font-bold mb-4 mt-8 border-b pb-2">By Space</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li><a href="#" class="hover:text-secondary">Guest Room</a></li>
-            <li><a href="#" class="hover:text-secondary">Lobby & Reception</a></li>
-            <li><a href="#" class="hover:text-secondary">Restaurant & Bar</a></li>
-            <li><a href="#" class="hover:text-secondary">Outdoor Areas</a></li>
-          </ul>
+          </div>
         </div>
       </aside>
 

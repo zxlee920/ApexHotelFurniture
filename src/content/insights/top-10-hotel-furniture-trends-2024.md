@@ -3,7 +3,7 @@ title: "Top 10 Hotel Furniture Trends for 2024"
 description: "Discover the latest design trends shaping the hospitality industry, from sustainable materials to multifunctional spaces."
 pubDate: 2023-11-27
 author: "Apex Design Team"
-image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+image: "/images/insights/trends-2024.jpg"
 tags: ["Design Trends", "Hotel Furniture", "Sustainability"]
 featured: true
 ---
